@@ -14,7 +14,7 @@ public class Main {
         EntityTransaction transaction = manager.getTransaction();
 
         transaction.begin();
-        manager.persist(new Person(123L, "Moges","Teklemariam",56));
+        manager.persist(new Person(123L, "Moges","Teklemariam",56, "moges@gmail.com"));
         System.out.println(manager.createQuery("from Person"));
         System.out.println(manager.createNativeQuery("select * from Persontbl"));
         transaction.commit();
